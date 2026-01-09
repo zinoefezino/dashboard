@@ -24,7 +24,7 @@ const Sidebar = ({
   return (
     <>
       <aside
-        className={`fixed md:static top-0 left-0 w-64 bg-white dark:bg-gray-800 shadow-lg p-6 flex flex-col h-screen justify-between z-50 transform transition-transform duration-300 ${
+        className={`fixed md:static top-0 left-0 w-60 bg-white dark:bg-gray-800 shadow-lg p-6 flex flex-col h-screen justify-between z-50 transform transition-transform duration-300 ${
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
         } md:translate-x-0`}
       >

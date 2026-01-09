@@ -10,9 +10,7 @@ const Header = ({ isDark, setIsDark, isSidebarOpen, setIsSidebarOpen }) => {
       >
         <FaBars />
       </button>
-      <h2 className="text-xl font-bold p-2 text-center md:text-left text-blue-600 dark:text-blue-400 cursor-pointer">
-        Welcome back, Zino! 👋
-      </h2>
+
       <button
         onClick={() => setIsDark(!isDark)}
         className="p-4 bg-gray-200 dark:bg-gray-700 rounded-full cursor-pointer shadow-lg hover:scale-110 transition"

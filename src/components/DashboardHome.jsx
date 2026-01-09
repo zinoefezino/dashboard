@@ -1,6 +1,9 @@
 const DashboardHome = () => {
   return (
     <div className="p-8">
+      <h2 className="text-xl font-bold mb-8 text-blue-600 dark:text-blue-400">
+        Welcome back, Zino!
+      </h2>
       <h3 className="text-2xl font-semibold mb-8">Your Overview</h3>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

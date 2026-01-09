@@ -2,7 +2,10 @@ import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
 import DashboardHome from "./components/DashboardHome";
 import AccountsPage from "./components/AccountsPage";
+import TransfersPage from "./components/TransfersPage";
+
 import { useState, useEffect } from "react";
+import SettingsPage from "./components/SettingsPage";
 
 const App = () => {
   const [isDark, setIsDark] = useState(() => {
@@ -35,14 +38,8 @@ const App = () => {
         <main className="flex-1">
           {activePage === "home" && <DashboardHome />}
           {activePage === "accounts" && <AccountsPage />}
-          {activePage === "transfers" && (
-            <p className="p-10 text-2xl">
-              Transfers page - send money here! 💸
-            </p>
-          )}
-          {activePage === "settings" && (
-            <p className="p-10 text-2xl">Settings - make it your own!</p>
-          )}
+          {activePage === "transfers" && <TransfersPage />}
+          {activePage === "settings" && <SettingsPage />}
         </main>
       </div>
     </div>
