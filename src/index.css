@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+/* 
+@theme {
+  --variant-dark: class;
+} */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+html {
+  transition: background-color 0.3s, color 0.3s;
+}
