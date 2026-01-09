@@ -17,3 +17,39 @@ body {
 html {
   transition: background-color 0.3s, color 0.3s;
 }
+
+.large-text {
+  font-size: 1rem;
+}
+
+.large-text h1 {
+  font-size: 2rem;
+}
+
+.large-text h2 {
+  font-size: 2rem;
+}
+
+.large-text h3 {
+  font-size: 1.5rem;
+}
+
+.large-text h4 {
+  font-size: 1.2rem;
+}
+
+.large-text p {
+  font-size: 1.125rem;
+}
+
+.large-text button {
+  font-size: 1rem;
+}
+
+.large-text input {
+  font-size: 1rem;
+}
+
+.large-text label {
+  font-size: 1rem;
+}

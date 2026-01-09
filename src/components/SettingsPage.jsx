@@ -1,4 +1,4 @@
-const SettingsPage = () => {
+const SettingsPage = ({ isDark, setIsDark, isLargeText, setIsLargeText }) => {
   return (
     <div className="p-6 sm:p-8 lg:p-10 max-w-4xl mx-auto">
       {/* Big title so you know you're in the control room */}
@@ -23,7 +23,7 @@ const SettingsPage = () => {
               </p>
             </div>
           </div>
-          <button className="w-full py-4 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition">
+          <button className="w-full py-4 bg-blue-600 text-white rounded-xl hover:bg-blue-700 cursor-pointer transition">
             Edit Profile
           </button>
         </div>
@@ -42,9 +42,17 @@ const SettingsPage = () => {
                 Make the app easier on the eyes at night
               </p>
             </div>
-            {/* We already have our toggle in header, but this shows how it could look */}
-            <div className="w-14 h-8 bg-gray-300 dark:bg-gray-600 rounded-full relative cursor-pointer">
-              <div className="absolute w-6 h-6 bg-white rounded-full top-1 left-1 shadow-md transition-all"></div>
+            <div
+              onClick={() => setIsDark(!isDark)}
+              className={`w-14 h-8 ${
+                isDark ? "bg-gray-600" : "bg-gray-300"
+              } rounded-full relative cursor-pointer transition-colors`}
+            >
+              <div
+                className={`absolute w-6 h-6 bg-white rounded-full top-1 shadow-md transition-all ${
+                  isDark ? "right-1" : "left-1"
+                }`}
+              ></div>
             </div>
           </div>
 
@@ -55,8 +63,17 @@ const SettingsPage = () => {
                 Increase text size for better reading
               </p>
             </div>
-            <div className="w-14 h-8 bg-blue-600 rounded-full relative">
-              <div className="absolute w-6 h-6 bg-white rounded-full top-1 right-1 shadow-md"></div>
+            <div
+              onClick={() => setIsLargeText(!isLargeText)}
+              className={`w-14 h-8 ${
+                isLargeText ? "bg-blue-600" : "bg-gray-300"
+              } rounded-full relative cursor-pointer transition-colors`}
+            >
+              <div
+                className={`absolute w-6 h-6 bg-white rounded-full top-1 shadow-md transition-all ${
+                  isLargeText ? "right-1" : "left-1"
+                }`}
+              ></div>
             </div>
           </div>
         </div>
@@ -76,13 +93,13 @@ const SettingsPage = () => {
               </p>
             </div>
             <div className="w-14 h-8 bg-green-600 rounded-full relative">
-              <div className="absolute w-6 h-6 bg-white rounded-full top-1 right-1 shadow-md"></div>
+              <div className="absolute w-6 h-6 bg-white rounded-full top-1 right-1 shadow-md cursor-pointer"></div>
             </div>
           </div>
 
           <div className="p-6">
             <p className="text-lg font-medium">Change Password</p>
-            <button className="mt-3 px-6 py-3 bg-gray-200 dark:bg-gray-700 rounded-xl hover:bg-gray-300 transition">
+            <button className="mt-3 px-6 py-3 bg-gray-200 dark:bg-gray-700 rounded-xl hover:bg-gray-300 hover:text-black cursor-pointer transition">
               Update Password
             </button>
           </div>
@@ -91,7 +108,7 @@ const SettingsPage = () => {
             <p className="text-lg font-medium text-red-600 dark:text-red-400">
               Log Out
             </p>
-            <button className="mt-3 px-6 py-3 bg-red-600 text-white rounded-xl hover:bg-red-700 transition">
+            <button className="mt-3 px-6 py-3 bg-red-600 text-white rounded-xl hover:bg-red-700 transition cursor-pointer">
               Log Out
             </button>
           </div>
@@ -109,13 +126,13 @@ const SettingsPage = () => {
             <li className="flex justify-between items-center">
               <span>Transaction Alerts</span>
               <div className="w-14 h-8 bg-blue-600 rounded-full relative">
-                <div className="absolute w-6 h-6 bg-white rounded-full top-1 right-1 shadow-md"></div>
+                <div className="absolute w-6 h-6 bg-white rounded-full top-1 right-1 shadow-md cursor-pointer"></div>
               </div>
             </li>
             <li className="flex justify-between items-center">
               <span>Low Balance Warnings</span>
               <div className="w-14 h-8 bg-gray-300 dark:bg-gray-600 rounded-full relative">
-                <div className="absolute w-6 h-6 bg-white rounded-full top-1 left-1 shadow-md"></div>
+                <div className="absolute w-6 h-6 bg-white rounded-full top-1 left-1 shadow-md cursor-pointer"></div>
               </div>
             </li>
           </ul>

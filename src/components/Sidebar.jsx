@@ -30,7 +30,7 @@ const Sidebar = ({
       >
         {/* Logo at the top */}
         <div className="flex justify-between items-center">
-          <h1 className="text-2xl font-bold p-2 text-left text-blue-600 dark:text-blue-400 cursor-pointer">
+          <h1 className="text-2xl font-bold p-2  text-left text-blue-600 dark:text-blue-400 cursor-pointer">
             Zee Banking
           </h1>
           <button
@@ -42,7 +42,7 @@ const Sidebar = ({
         </div>
 
         {/* Nav centered in remaining space */}
-        <nav className="flex flex-col gap-7 mt-8 pl-2">
+        <nav className="flex flex-col gap-7 mt-20 pl-1">
           {navItems.map((item) => (
             <button
               key={item.name}

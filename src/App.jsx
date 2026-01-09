@@ -11,6 +11,9 @@ const App = () => {
   const [isDark, setIsDark] = useState(() => {
     return localStorage.getItem("isDark") === "true";
   });
+  const [isLargeText, setIsLargeText] = useState(() => {
+    return localStorage.getItem("isLargeText") === "true";
+  });
   const [activePage, setActivePage] = useState("home");
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -20,8 +23,22 @@ const App = () => {
     localStorage.setItem("isDark", isDark);
   }, [isDark]);
 
+  useEffect(() => {
+    if (isLargeText) {
+      document.documentElement.classList.add("large-text");
+    } else {
+      document.documentElement.classList.remove("large-text");
+    }
+
+    localStorage.setItem("isLargeText", isLargeText);
+  }, [isLargeText]);
+
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 flex">
+    <div
+      className={`min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 flex ${
+        isSidebarOpen ? "overflow-hidden md:overflow-auto" : ""
+      }`}
+    >
       <Sidebar
         activePage={activePage}
         setActivePage={setActivePage}
@@ -39,7 +56,14 @@ const App = () => {
           {activePage === "home" && <DashboardHome />}
           {activePage === "accounts" && <AccountsPage />}
           {activePage === "transfers" && <TransfersPage />}
-          {activePage === "settings" && <SettingsPage />}
+          {activePage === "settings" && (
+            <SettingsPage
+              isDark={isDark}
+              setIsDark={setIsDark}
+              isLargeText={isLargeText}
+              setIsLargeText={setIsLargeText}
+            />
+          )}
         </main>
       </div>
     </div>

@@ -97,10 +97,10 @@ const AccountsPage = () => {
       <div className="mt-10 p-6 bg-linear-to-r from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-700 rounded-2xl">
         <h4 className="text-xl font-bold mb-4">Quick Actions</h4>
         <div className="flex flex-wrap gap-4">
-          <button className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+          <button className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition cursor-pointer">
             Add New Account
           </button>
-          <button className="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">
+          <button className="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition cursor-pointer">
             Transfer Money
           </button>
         </div>
