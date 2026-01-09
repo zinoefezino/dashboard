@@ -4,6 +4,7 @@ import {
   FaExchangeAlt,
   FaCog,
   FaSignOutAlt,
+  FaTimes,
 } from "react-icons/fa";
 import React from "react";
 
@@ -22,21 +23,23 @@ const Sidebar = ({
 
   return (
     <>
-      {isSidebarOpen && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
-          onClick={() => setIsSidebarOpen(false)}
-        ></div>
-      )}
       <aside
         className={`fixed md:static top-0 left-0 w-64 bg-white dark:bg-gray-800 shadow-lg p-6 flex flex-col h-screen justify-between z-50 transform transition-transform duration-300 ${
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
         } md:translate-x-0`}
       >
         {/* Logo at the top */}
-        <h1 className="text-2xl font-bold p-2 text-left text-blue-600 dark:text-blue-400 cursor-pointer">
-          Zee Banking
-        </h1>
+        <div className="flex justify-between items-center">
+          <h1 className="text-2xl font-bold p-2 text-left text-blue-600 dark:text-blue-400 cursor-pointer">
+            Zee Banking
+          </h1>
+          <button
+            onClick={() => setIsSidebarOpen(false)}
+            className="md:hidden p-1 bg-gray-200 dark:bg-gray-700 rounded-full cursor-pointer shadow-lg hover:scale-110 transition"
+          >
+            <FaTimes className="text-xl" />
+          </button>
+        </div>
 
         {/* Nav centered in remaining space */}
         <nav className="flex flex-col gap-7 mt-8 pl-2">

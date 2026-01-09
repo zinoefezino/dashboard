@@ -1,6 +1,7 @@
 import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
 import DashboardHome from "./components/DashboardHome";
+import AccountsPage from "./components/AccountsPage";
 import { useState, useEffect } from "react";
 
 const App = () => {
@@ -33,9 +34,7 @@ const App = () => {
         />
         <main className="flex-1">
           {activePage === "home" && <DashboardHome />}
-          {activePage === "accounts" && (
-            <p className="p-10 text-2xl">Accounts page coming soon!</p>
-          )}
+          {activePage === "accounts" && <AccountsPage />}
           {activePage === "transfers" && (
             <p className="p-10 text-2xl">
               Transfers page - send money here! 💸
