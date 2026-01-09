@@ -10,7 +10,7 @@ const DashboardHome = () => {
         <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-8 text-center">
           <p className="text-gray-600 dark:text-gray-400 mb-2">Total Balance</p>
           <p className="text-5xl font-extrabold text-green-600 dark:text-green-400">
-            $12,345.67
+            $8,345.67
           </p>
         </div>
 
