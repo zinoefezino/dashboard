@@ -35,7 +35,7 @@ const Sidebar = ({
           </h1>
           <button
             onClick={() => setIsSidebarOpen(false)}
-            className="md:hidden p-1 bg-gray-200 dark:bg-gray-700 rounded-full cursor-pointer shadow-lg hover:scale-110 transition"
+            className="md:hidden p-1 bg-gray-200 dark:bg-gray-700 rounded-full cursor-pointer hover:scale-110 transition"
           >
             <FaTimes className="text-xl" />
           </button>
