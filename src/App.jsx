@@ -53,7 +53,7 @@ const App = () => {
           setIsSidebarOpen={setIsSidebarOpen}
         />
         <main className="flex-1">
-          {activePage === "home" && <DashboardHome />}
+          {activePage === "home" && <DashboardHome isLargeText={isLargeText} />}
           {activePage === "accounts" && <AccountsPage />}
           {activePage === "transfers" && <TransfersPage />}
           {activePage === "settings" && (
